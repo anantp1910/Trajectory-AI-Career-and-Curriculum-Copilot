@@ -22,8 +22,12 @@ if not API_KEY:
 ai = Anthropic(api_key=API_KEY)
 
 # ── Load courses ──
-with open(os.path.join(os.path.dirname(__file__), "data", "courses.json")) as f:
-    COURSES = json.load(f)["courses"]
+data_dir = os.path.join(os.path.dirname(__file__), "data")
+merged_path = os.path.join(data_dir, "courses_merged.json")
+default_path = os.path.join(data_dir, "courses.json")
+use_path = merged_path if os.path.exists(merged_path) else default_path
+with open(use_path) as f:
+    COURSES = json.load(f).get("courses", [])
 
 
 @app.get("/health")
