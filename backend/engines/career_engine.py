@@ -103,20 +103,54 @@ def score_job_readiness(client, career_goal, skills_have, skill_gaps, job_requir
 
 def highlight_resume_skills(client, resume_data, job_requirements, skill_gaps, career_goal):
     """Lightweight resume analysis — what to highlight, what's missing, rewritten bullets."""
-    prompt = f"You are a resume coach. Analyze this resume for a {career_goal} role.\n\nResume data: {json.dumps(resume_data, indent=2)}\nJob requirements: {json.dumps(job_requirements) if job_requirements else 'Infer from ' + career_goal}\nSkill gaps: {json.dumps([g.get('skill') for g in skill_gaps[:5]])}\n\nReturn JSON."
+    schema_example = {
+        "match_percentage": 72,
+        "highlight_these": [
+            {"skill": "Python", "why": "Directly relevant — mention specific projects"}
+        ],
+        "missing_from_resume": [
+            {"skill": "SQL", "suggestion": "Add: 'Wrote SQL queries to analyze user data...'", "course_fix": "CMPSC 431W"}
+        ],
+        "rewritten_bullets": [
+            {"original_context": "Built a web app", "rewritten": "Designed and shipped a web app serving 500+ users, collaborating with 3 engineers to deliver features on time"}
+        ],
+        "quick_tips": [
+            "Add metrics to every bullet (numbers = credibility)",
+            "Lead with outcomes, not implementations"
+        ]
+    }
+    resume_display = {k: v for k, v in (resume_data or {}).items() if k != "text"}
+    prompt = (
+        f"You are a resume coach. Analyze this resume for a {career_goal} role.\n\n"
+        f"Resume data: {json.dumps(resume_display, indent=2)}\n"
+        f"Job requirements: {json.dumps(job_requirements) if job_requirements else 'Infer from ' + career_goal}\n"
+        f"Skill gaps to address: {json.dumps([g.get('skill') for g in skill_gaps[:5]])}\n\n"
+        f"Return ONLY a JSON object with EXACTLY this structure (no extra keys):\n"
+        f"{json.dumps(schema_example, indent=2)}\n\n"
+        f"Rules:\n"
+        f"- match_percentage: integer 0-100 based on how well the resume matches the role\n"
+        f"- highlight_these: skills already in the resume worth emphasizing\n"
+        f"- missing_from_resume: important skills absent from the resume with specific bullet suggestions\n"
+        f"- rewritten_bullets: 2-3 existing bullets rewritten to be stronger and more impactful\n"
+        f"- quick_tips: 2-3 actionable tips to immediately improve the resume\n"
+        f"- course_fix in missing_from_resume: a Penn State course code or null"
+    )
     try:
         if client:
             response = client.messages.create(
-                model="claude-sonnet-4-20250514", max_tokens=2000,
+                model="claude-sonnet-4-5", max_tokens=2000,
                 messages=[{"role": "user", "content": prompt}]
             )
             text = response.content[0].text
+            parsed = None
             try:
-                return json.loads(text)
-            except:
+                parsed = json.loads(text)
+            except Exception:
                 s, e = text.find('{'), text.rfind('}') + 1
                 if s != -1 and e > s:
-                    return json.loads(text[s:e])
+                    parsed = json.loads(text[s:e])
+            if parsed and all(k in parsed for k in ("match_percentage", "highlight_these", "missing_from_resume")):
+                return parsed
     except Exception:
         # Deterministic fallback
         resume_skills = []

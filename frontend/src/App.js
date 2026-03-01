@@ -40,22 +40,62 @@ const COURSES_MAP = {
 };
 
 const PREREQ_TREE = {
-  "CMPSC 131": [], "CMPSC 132": ["CMPSC 131"], "CMPSC 221": ["CMPSC 132"],
-  "CMPSC 311": ["CMPSC 221"], "CMPSC 360": ["CMPSC 132","MATH 141"],
+  // ── Foundations ──────────────────────────────────────────────────────
+  "MATH 110": [], "MATH 140": [], "MATH 141": ["MATH 140"],
+  "MATH 220": ["MATH 140"], "MATH 230": ["MATH 141"], "MATH 251": ["MATH 141"],
+  "STAT 200": [], "STAT 318": ["MATH 141"], "STAT 380": ["STAT 200","MATH 141"],
+  "STAT 415": ["STAT 318"],
+  "PHYS 211": ["MATH 140"], "PHYS 212": ["PHYS 211","MATH 141"],
+  "CAS 100": [], "ENGL 015": [],
+  // ── Accounting & Business ────────────────────────────────────────────
+  "ACCTG 211": [], "ACCTG 301": ["ACCTG 211"], "ACCTG 302": ["ACCTG 301"],
+  "ACCTG 402": ["ACCTG 302"], "BLAW 243": [],
+  "ECON 102": [], "ECON 104": [], "ECON 302": ["ECON 102","MATH 110"],
+  "ECON 304": ["ECON 104","MATH 110"],
+  "SCM 200": [], "SCM 301": ["STAT 200"],
+  "BI 301": ["STAT 200"],
+  "MGMT 301": [], "MGMT 310": ["MGMT 301"], "MGMT 471": ["MGMT 301","FIN 301","MKT 301"],
+  "MKT 301": [], "MKT 330": ["MKT 301","STAT 200"], "MKT 405": ["MKT 301"],
+  // ── Finance ──────────────────────────────────────────────────────────
+  "FIN 100": [], "FIN 301": ["ACCTG 211","ECON 102","STAT 200"],
+  "FIN 302": ["FIN 301","ACCTG 211","MATH 110"],
+  "FIN 305": ["FIN 301"], "FIN 306W": ["FIN 301"], "FIN 330": ["ACCTG 211","ECON 102"],
+  "FIN 407": ["FIN 305"], "FIN 408": ["FIN 302"], "FIN 420": ["FIN 305"],
+  "FIN 425": ["FIN 305"], "FIN 440W": ["FIN 302"], "FIN 450": ["FIN 302"],
+  "FIN 460": ["FIN 306W"],
+  // ── Computer Science ─────────────────────────────────────────────────
+  "CMPSC 121": [], "CMPSC 131": [], "CMPSC 132": ["CMPSC 131"],
+  "CMPSC 221": ["CMPSC 132"], "CMPSC 311": ["CMPSC 221"],
+  "CMPSC 360": ["CMPSC 132","MATH 141"],
   "CMPSC 431W": ["CMPSC 221"], "CMPSC 442": ["CMPSC 360"],
   "CMPSC 448": ["CMPSC 360","STAT 318"], "CMPSC 461": ["CMPSC 360"],
-  "CMPSC 465": ["CMPSC 360"], "CMPSC 473": ["CMPSC 311"],
-  "CMPSC 483W": ["CMPSC 221"], "CMPSC 497": [],
-  "MATH 140": [], "MATH 141": ["MATH 140"], "MATH 220": ["MATH 140"],
-  "MATH 230": ["MATH 141"], "STAT 200": [], "STAT 318": ["MATH 141"],
-  "STAT 380": ["STAT 200"], "PHYS 211": ["MATH 140"],
+  "CMPSC 463": ["CMPSC 360"], "CMPSC 465": ["CMPSC 360"],
+  "CMPSC 473": ["CMPSC 311"], "CMPSC 475": ["CMPSC 221"],
+  "CMPSC 483W": ["CMPSC 221"], "CMPSC 487W": ["CMPSC 483W"],
+  "CMPSC 497": ["CMPSC 483W"],
+  // ── Data Sciences ────────────────────────────────────────────────────
   "DS 200": [], "DS 220": ["CMPSC 131"], "DS 310": ["DS 200"],
-  "DS 410": ["DS 310","STAT 318"], "IST 210": [], "IST 256": [],
-  "FIN 301": ["ACCTG 211"], "FIN 302": ["FIN 301"], "ACCTG 211": [],
-  "ECON 102": [], "ECON 104": [], "MGMT 301": [], "MKT 301": [],
-  "MKT 330": ["MKT 301"], "SCM 301": [], "CAS 100": [], "ENGL 015": [],
-  "BI 301": ["STAT 200"], "BIOL 110": [], "CHEM 110": [],
-  "IE 302": ["MATH 141"], "IE 330": ["STAT 200"],
+  "DS 320": ["DS 220","MATH 220"], "DS 340": ["DS 220","STAT 318"],
+  "DS 410": ["DS 310","STAT 318"], "DS 420": ["DS 340","MATH 220"],
+  // ── IST ──────────────────────────────────────────────────────────────
+  "IST 110": [], "IST 210": [], "IST 230": ["IST 110"],
+  "IST 256": [], "IST 311": ["IST 210","IST 256"],
+  "IST 331": ["IST 210"], "IST 402": [], "IST 440W": ["IST 311"],
+  // ── Electrical Engineering ───────────────────────────────────────────
+  "EE 210": ["MATH 141","PHYS 212"], "EE 310": ["EE 210"],
+  "EE 350": ["EE 210","MATH 251"], "EE 420": ["EE 310"],
+  "EE 440": ["EE 350"],
+  // ── Mechanical Engineering ───────────────────────────────────────────
+  "ME 201": ["PHYS 211","MATH 141"], "ME 204": ["ME 201","MATH 141"],
+  "ME 300": ["PHYS 211","MATH 141"], "ME 340": ["ME 300","MATH 230"],
+  "ME 360": ["ME 204"], "ME 440": ["ME 204","MATH 251"],
+  // ── Industrial Engineering ───────────────────────────────────────────
+  "IE 302": ["MATH 141"], "IE 330": ["STAT 200"], "IE 340": ["IE 302"],
+  "IE 407": ["IE 302","STAT 200","MATH 220"],
+  "IE 421": ["IE 302","STAT 200"], "IE 450": ["STAT 318","IE 302"],
+  // ── Biology / Chemistry ──────────────────────────────────────────────
+  "BIOL 110": [], "BIOL 230": ["BIOL 110"], "BIOL 240": ["BIOL 110","CHEM 110"],
+  "CHEM 110": [], "CHEM 112": ["CHEM 110"], "CHEM 210": ["CHEM 112"],
 };
 
 // ════════════════════════════════════════════
@@ -1019,7 +1059,7 @@ function CurriculumPanel({ data }) {
         }}>
           <span style={{ fontSize: 13, color: C.dim }}>Career readiness after this plan:</span>
           <span style={{ fontSize: 28, fontWeight: 800, color: C.accent, fontFamily: "'Syne',sans-serif" }}>
-            <AnimNum value={parseInt(data.career_readiness_after)} suffix="%" />
+            <AnimNum value={parseInt(String(data.career_readiness_after).replace(/[^0-9]/g, "")) || 0} suffix="%" />
           </span>
         </div>
       )}

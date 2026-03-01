@@ -13,7 +13,7 @@ def extract_text_from_pdf(file_bytes):
 
 def parse_resume(client, resume_text):
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-5",
         max_tokens=2000,
         messages=[{
             "role": "user",

@@ -1,13 +1,858 @@
 {
   "courses": [
     {
+      "code": "MATH 110",
+      "name": "Techniques of Calculus I",
+      "department": "Mathematics",
+      "skills": [
+        "Calculus",
+        "Derivatives",
+        "Optimization",
+        "Mathematical Modeling"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "Engineering",
+        "Finance",
+        "Data Science"
+      ]
+    },
+    {
+      "code": "MATH 140",
+      "name": "Calculus with Analytic Geometry I",
+      "department": "Mathematics",
+      "skills": [
+        "Differential Calculus",
+        "Limits",
+        "Derivatives",
+        "Mathematical Analysis"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "Engineering",
+        "Computer Science",
+        "Data Science"
+      ]
+    },
+    {
+      "code": "MATH 141",
+      "name": "Calculus with Analytic Geometry II",
+      "department": "Mathematics",
+      "skills": [
+        "Integral Calculus",
+        "Series",
+        "Taylor Series",
+        "Multivariable Intro"
+      ],
+      "prerequisites": [
+        "MATH 140"
+      ],
+      "career_relevance": [
+        "Engineering",
+        "Computer Science",
+        "Data Science"
+      ]
+    },
+    {
+      "code": "MATH 220",
+      "name": "Matrices",
+      "department": "Mathematics",
+      "skills": [
+        "Linear Algebra",
+        "Matrix Operations",
+        "Eigenvalues",
+        "Vector Spaces"
+      ],
+      "prerequisites": [
+        "MATH 140"
+      ],
+      "career_relevance": [
+        "Data Science",
+        "ML Engineer",
+        "Engineering"
+      ]
+    },
+    {
+      "code": "MATH 230",
+      "name": "Calculus and Vector Analysis",
+      "department": "Mathematics",
+      "skills": [
+        "Multivariable Calculus",
+        "Vector Calculus",
+        "Partial Derivatives",
+        "Line Integrals"
+      ],
+      "prerequisites": [
+        "MATH 141"
+      ],
+      "career_relevance": [
+        "Engineering",
+        "Physics",
+        "Data Science"
+      ]
+    },
+    {
+      "code": "MATH 251",
+      "name": "Ordinary Differential Equations",
+      "department": "Mathematics",
+      "skills": [
+        "Differential Equations",
+        "Laplace Transform",
+        "Linear Systems",
+        "Mathematical Modeling"
+      ],
+      "prerequisites": [
+        "MATH 141"
+      ],
+      "career_relevance": [
+        "Engineering",
+        "Physics",
+        "Finance"
+      ]
+    },
+    {
+      "code": "STAT 200",
+      "name": "Elementary Statistics",
+      "department": "Statistics",
+      "skills": [
+        "Statistics",
+        "Probability",
+        "Hypothesis Testing",
+        "Regression Analysis",
+        "Data Analysis"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "Data Analyst",
+        "Financial Analyst",
+        "Researcher",
+        "Consultant"
+      ]
+    },
+    {
+      "code": "STAT 318",
+      "name": "Elementary Probability",
+      "department": "Statistics",
+      "skills": [
+        "Probability Theory",
+        "Random Variables",
+        "Distributions",
+        "Statistical Inference"
+      ],
+      "prerequisites": [
+        "MATH 141"
+      ],
+      "career_relevance": [
+        "Data Scientist",
+        "Quantitative Analyst",
+        "Financial Engineer"
+      ]
+    },
+    {
+      "code": "STAT 380",
+      "name": "Probability and Statistics for Computer Science",
+      "department": "Statistics",
+      "skills": [
+        "Bayesian Statistics",
+        "Stochastic Processes",
+        "Statistical Computing",
+        "Machine Learning Foundations"
+      ],
+      "prerequisites": [
+        "STAT 200",
+        "MATH 141"
+      ],
+      "career_relevance": [
+        "Data Scientist",
+        "ML Engineer",
+        "Quantitative Analyst"
+      ]
+    },
+    {
+      "code": "STAT 415",
+      "name": "Introduction to Mathematical Statistics",
+      "department": "Statistics",
+      "skills": [
+        "Mathematical Statistics",
+        "Parameter Estimation",
+        "Confidence Intervals",
+        "Regression"
+      ],
+      "prerequisites": [
+        "STAT 318"
+      ],
+      "career_relevance": [
+        "Data Scientist",
+        "Quantitative Analyst",
+        "Actuary"
+      ]
+    },
+    {
+      "code": "CAS 100",
+      "name": "Effective Speech",
+      "department": "Communications",
+      "skills": [
+        "Public Speaking",
+        "Communication",
+        "Presentation",
+        "Persuasion"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "All careers"
+      ]
+    },
+    {
+      "code": "ENGL 015",
+      "name": "Rhetoric and Composition",
+      "department": "English",
+      "skills": [
+        "Writing",
+        "Critical Thinking",
+        "Research",
+        "Argumentation"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "All careers"
+      ]
+    },
+    {
+      "code": "ACCTG 211",
+      "name": "Financial and Managerial Accounting",
+      "department": "Accounting",
+      "skills": [
+        "Financial Statements",
+        "Accounting Principles",
+        "Cost Analysis",
+        "Budgeting",
+        "Balance Sheet"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "Investment Banking",
+        "Financial Analyst",
+        "Accounting",
+        "Consulting"
+      ]
+    },
+    {
+      "code": "ACCTG 301",
+      "name": "Intermediate Accounting I",
+      "department": "Accounting",
+      "skills": [
+        "GAAP",
+        "Revenue Recognition",
+        "Balance Sheet Analysis",
+        "Financial Reporting"
+      ],
+      "prerequisites": [
+        "ACCTG 211"
+      ],
+      "career_relevance": [
+        "Accountant",
+        "Financial Analyst",
+        "Investment Banking"
+      ]
+    },
+    {
+      "code": "ACCTG 302",
+      "name": "Intermediate Accounting II",
+      "department": "Accounting",
+      "skills": [
+        "Income Taxes",
+        "Leases",
+        "Pensions",
+        "Stockholders Equity",
+        "Advanced Accounting"
+      ],
+      "prerequisites": [
+        "ACCTG 301"
+      ],
+      "career_relevance": [
+        "Accountant",
+        "Financial Analyst",
+        "CPA"
+      ]
+    },
+    {
+      "code": "ACCTG 402",
+      "name": "Advanced Accounting",
+      "department": "Accounting",
+      "skills": [
+        "Consolidations",
+        "Business Combinations",
+        "Governmental Accounting",
+        "Advanced GAAP"
+      ],
+      "prerequisites": [
+        "ACCTG 302"
+      ],
+      "career_relevance": [
+        "CPA",
+        "Financial Analyst",
+        "Investment Banking"
+      ]
+    },
+    {
+      "code": "ECON 102",
+      "name": "Introductory Microeconomics",
+      "department": "Economics",
+      "skills": [
+        "Supply and Demand",
+        "Market Analysis",
+        "Price Theory",
+        "Consumer Behavior",
+        "Microeconomics"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "Financial Analyst",
+        "Economist",
+        "Policy Analyst",
+        "Consultant"
+      ]
+    },
+    {
+      "code": "ECON 104",
+      "name": "Introductory Macroeconomics",
+      "department": "Economics",
+      "skills": [
+        "GDP Analysis",
+        "Monetary Policy",
+        "Fiscal Policy",
+        "Economic Indicators",
+        "Macroeconomics"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "Financial Analyst",
+        "Investment Banking",
+        "Policy Analyst"
+      ]
+    },
+    {
+      "code": "ECON 302",
+      "name": "Intermediate Microeconomics",
+      "department": "Economics",
+      "skills": [
+        "Game Theory",
+        "Market Equilibrium",
+        "Optimization",
+        "Economic Modeling"
+      ],
+      "prerequisites": [
+        "ECON 102",
+        "MATH 110"
+      ],
+      "career_relevance": [
+        "Economist",
+        "Financial Analyst",
+        "Consultant"
+      ]
+    },
+    {
+      "code": "ECON 304",
+      "name": "Intermediate Macroeconomics",
+      "department": "Economics",
+      "skills": [
+        "Business Cycles",
+        "Monetary Theory",
+        "Growth Theory",
+        "International Economics"
+      ],
+      "prerequisites": [
+        "ECON 104",
+        "MATH 110"
+      ],
+      "career_relevance": [
+        "Economist",
+        "Financial Analyst",
+        "Investment Banking"
+      ]
+    },
+    {
+      "code": "SCM 200",
+      "name": "Introduction to Global Supply Chain",
+      "department": "Supply Chain",
+      "skills": [
+        "Supply Chain Basics",
+        "Global Operations",
+        "Procurement",
+        "Logistics"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "Supply Chain Manager",
+        "Operations Manager",
+        "Consultant"
+      ]
+    },
+    {
+      "code": "FIN 100",
+      "name": "Introduction to Finance",
+      "department": "Finance",
+      "skills": [
+        "Financial Concepts",
+        "Time Value of Money",
+        "Risk and Return",
+        "Financial Markets"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "Finance",
+        "Business",
+        "Investment Banking"
+      ]
+    },
+    {
+      "code": "FIN 301",
+      "name": "Corporation Finance",
+      "department": "Finance",
+      "skills": [
+        "Financial Analysis",
+        "Capital Structure",
+        "Valuation",
+        "Cash Flow Analysis",
+        "Financial Ratios",
+        "Corporate Finance"
+      ],
+      "prerequisites": [
+        "ACCTG 211",
+        "ECON 102",
+        "STAT 200"
+      ],
+      "career_relevance": [
+        "Investment Banking",
+        "Financial Analyst",
+        "Corporate Finance",
+        "Consulting"
+      ]
+    },
+    {
+      "code": "FIN 302",
+      "name": "Introductory Financial Modeling",
+      "department": "Finance",
+      "skills": [
+        "Excel Modeling",
+        "DCF Analysis",
+        "Scenario Analysis",
+        "Sensitivity Analysis",
+        "Financial Modeling",
+        "Valuation"
+      ],
+      "prerequisites": [
+        "FIN 301",
+        "ACCTG 211",
+        "MATH 110"
+      ],
+      "career_relevance": [
+        "Investment Banking",
+        "Financial Analyst",
+        "Private Equity",
+        "Consulting"
+      ]
+    },
+    {
+      "code": "FIN 305",
+      "name": "Financial Management of the Business Enterprise",
+      "department": "Finance",
+      "skills": [
+        "Working Capital Management",
+        "Capital Budgeting",
+        "Dividend Policy",
+        "Corporate Strategy",
+        "Financial Planning"
+      ],
+      "prerequisites": [
+        "FIN 301"
+      ],
+      "career_relevance": [
+        "Corporate Finance",
+        "CFO",
+        "Financial Analyst",
+        "Management"
+      ]
+    },
+    {
+      "code": "FIN 306W",
+      "name": "Investment Valuation",
+      "department": "Finance",
+      "skills": [
+        "Equity Valuation",
+        "Comparable Analysis",
+        "Precedent Transactions",
+        "LBO Modeling",
+        "M&A Analysis"
+      ],
+      "prerequisites": [
+        "FIN 301"
+      ],
+      "career_relevance": [
+        "Investment Banking",
+        "Private Equity",
+        "Equity Research",
+        "M&A"
+      ]
+    },
+    {
+      "code": "FIN 330",
+      "name": "Personal Financial Planning",
+      "department": "Finance",
+      "skills": [
+        "Personal Finance",
+        "Retirement Planning",
+        "Insurance",
+        "Tax Planning",
+        "Wealth Management"
+      ],
+      "prerequisites": [
+        "ACCTG 211",
+        "ECON 102"
+      ],
+      "career_relevance": [
+        "Financial Planning",
+        "Wealth Management",
+        "Insurance"
+      ]
+    },
+    {
+      "code": "FIN 407",
+      "name": "Advanced Corporate Finance",
+      "department": "Finance",
+      "skills": [
+        "M&A Analysis",
+        "Restructuring",
+        "Leveraged Buyouts",
+        "Advanced Valuation",
+        "Deal Structuring",
+        "Investment Banking"
+      ],
+      "prerequisites": [
+        "FIN 305"
+      ],
+      "career_relevance": [
+        "Investment Banking",
+        "Private Equity",
+        "M&A",
+        "Corporate Development"
+      ]
+    },
+    {
+      "code": "FIN 408",
+      "name": "Derivatives and Risk Management",
+      "department": "Finance",
+      "skills": [
+        "Options Pricing",
+        "Futures",
+        "Hedging",
+        "Risk Management",
+        "Black-Scholes",
+        "Derivatives"
+      ],
+      "prerequisites": [
+        "FIN 302"
+      ],
+      "career_relevance": [
+        "Investment Banking",
+        "Risk Management",
+        "Trading",
+        "Hedge Fund"
+      ]
+    },
+    {
+      "code": "FIN 420",
+      "name": "Financial Institutions Management",
+      "department": "Finance",
+      "skills": [
+        "Banking Operations",
+        "Credit Analysis",
+        "Regulatory Compliance",
+        "Asset Liability Management"
+      ],
+      "prerequisites": [
+        "FIN 305"
+      ],
+      "career_relevance": [
+        "Investment Banking",
+        "Commercial Banking",
+        "Financial Regulation"
+      ]
+    },
+    {
+      "code": "FIN 425",
+      "name": "International Finance",
+      "department": "Finance",
+      "skills": [
+        "Exchange Rates",
+        "International Capital Markets",
+        "Cross-border Transactions",
+        "Currency Risk",
+        "Global Finance"
+      ],
+      "prerequisites": [
+        "FIN 305"
+      ],
+      "career_relevance": [
+        "Investment Banking",
+        "International Finance",
+        "Consulting",
+        "Multinational Corporations"
+      ]
+    },
+    {
+      "code": "FIN 440W",
+      "name": "Investment Analysis",
+      "department": "Finance",
+      "skills": [
+        "Portfolio Management",
+        "Security Analysis",
+        "Asset Pricing",
+        "Financial Statement Analysis",
+        "Equity Research"
+      ],
+      "prerequisites": [
+        "FIN 302"
+      ],
+      "career_relevance": [
+        "Investment Banking",
+        "Portfolio Management",
+        "Equity Research",
+        "Asset Management"
+      ]
+    },
+    {
+      "code": "FIN 450",
+      "name": "Fixed Income Securities",
+      "department": "Finance",
+      "skills": [
+        "Bond Valuation",
+        "Duration Analysis",
+        "Yield Curves",
+        "Credit Risk",
+        "Fixed Income"
+      ],
+      "prerequisites": [
+        "FIN 302"
+      ],
+      "career_relevance": [
+        "Investment Banking",
+        "Fixed Income Trading",
+        "Asset Management"
+      ]
+    },
+    {
+      "code": "FIN 460",
+      "name": "Financial Modeling and Valuation",
+      "department": "Finance",
+      "skills": [
+        "Advanced Financial Modeling",
+        "Three-Statement Modeling",
+        "DCF",
+        "LBO",
+        "M&A Modeling",
+        "Excel"
+      ],
+      "prerequisites": [
+        "FIN 306W"
+      ],
+      "career_relevance": [
+        "Investment Banking",
+        "Private Equity",
+        "Corporate Finance"
+      ]
+    },
+    {
+      "code": "BLAW 243",
+      "name": "Legal Environment of Business",
+      "department": "Business",
+      "skills": [
+        "Business Law",
+        "Contract Law",
+        "Corporate Law",
+        "Regulatory Environment",
+        "Compliance"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "Investment Banking",
+        "Consulting",
+        "Business",
+        "Law"
+      ]
+    },
+    {
+      "code": "BI 301",
+      "name": "Introduction to Business Intelligence",
+      "department": "Business Intelligence",
+      "skills": [
+        "SQL",
+        "Data Visualization",
+        "Business Analytics",
+        "Dashboard Design",
+        "Excel"
+      ],
+      "prerequisites": [
+        "STAT 200"
+      ],
+      "career_relevance": [
+        "Business Analyst",
+        "Data Analyst",
+        "Financial Analyst",
+        "Consultant"
+      ]
+    },
+    {
+      "code": "MGMT 301",
+      "name": "Basic Management Concepts",
+      "department": "Management",
+      "skills": [
+        "Leadership",
+        "Organizational Behavior",
+        "Strategic Management",
+        "Team Management",
+        "Decision Making"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "Manager",
+        "Consultant",
+        "Project Manager",
+        "Entrepreneur"
+      ]
+    },
+    {
+      "code": "MGMT 310",
+      "name": "Management and Organizations",
+      "department": "Management",
+      "skills": [
+        "Organizational Theory",
+        "Change Management",
+        "Corporate Culture",
+        "HR Strategy"
+      ],
+      "prerequisites": [
+        "MGMT 301"
+      ],
+      "career_relevance": [
+        "HR Manager",
+        "Consultant",
+        "Executive"
+      ]
+    },
+    {
+      "code": "MGMT 471",
+      "name": "Strategic Management",
+      "department": "Management",
+      "skills": [
+        "Business Strategy",
+        "Competitive Analysis",
+        "SWOT Analysis",
+        "Strategic Planning",
+        "Industry Analysis"
+      ],
+      "prerequisites": [
+        "MGMT 301",
+        "FIN 301",
+        "MKT 301"
+      ],
+      "career_relevance": [
+        "Strategy Consultant",
+        "Executive",
+        "Corporate Strategy",
+        "Entrepreneur"
+      ]
+    },
+    {
+      "code": "MKT 301",
+      "name": "Principles of Marketing",
+      "department": "Marketing",
+      "skills": [
+        "Market Research",
+        "Consumer Behavior",
+        "Marketing Strategy",
+        "Brand Management",
+        "4Ps"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "Marketing Manager",
+        "Product Manager",
+        "Brand Manager",
+        "Consultant"
+      ]
+    },
+    {
+      "code": "MKT 330",
+      "name": "Marketing Research",
+      "department": "Marketing",
+      "skills": [
+        "Research Methods",
+        "Survey Design",
+        "Data Analysis",
+        "Consumer Insights",
+        "Qualitative Research"
+      ],
+      "prerequisites": [
+        "MKT 301",
+        "STAT 200"
+      ],
+      "career_relevance": [
+        "Market Researcher",
+        "Data Analyst",
+        "Product Manager"
+      ]
+    },
+    {
+      "code": "MKT 405",
+      "name": "Digital Marketing",
+      "department": "Marketing",
+      "skills": [
+        "SEO",
+        "Digital Advertising",
+        "Social Media Marketing",
+        "Google Analytics",
+        "Content Marketing"
+      ],
+      "prerequisites": [
+        "MKT 301"
+      ],
+      "career_relevance": [
+        "Digital Marketer",
+        "Growth Hacker",
+        "Product Manager",
+        "Brand Manager"
+      ]
+    },
+    {
+      "code": "SCM 301",
+      "name": "Operations and Supply Chain Management",
+      "department": "Supply Chain",
+      "skills": [
+        "Process Improvement",
+        "Inventory Management",
+        "Lean Manufacturing",
+        "Six Sigma",
+        "Operations"
+      ],
+      "prerequisites": [
+        "STAT 200"
+      ],
+      "career_relevance": [
+        "Operations Manager",
+        "Supply Chain Analyst",
+        "Consultant"
+      ]
+    },
+    {
       "code": "CMPSC 121",
       "name": "Intro to Programming",
       "department": "Computer Science",
       "skills": [
         "Python",
         "Problem Solving",
-        "Algorithms Basics"
+        "Algorithms Basics",
+        "Programming Fundamentals"
       ],
       "prerequisites": [],
       "career_relevance": [
@@ -23,7 +868,8 @@
       "skills": [
         "Python",
         "Data Structures Basics",
-        "Recursion"
+        "Recursion",
+        "OOP Basics"
       ],
       "prerequisites": [],
       "career_relevance": [
@@ -37,10 +883,12 @@
       "name": "Programming and Computation II",
       "department": "Computer Science",
       "skills": [
-        "Python",
-        "OOP",
         "Data Structures",
-        "Algorithm Design"
+        "Algorithms",
+        "Java",
+        "OOP",
+        "Linked Lists",
+        "Trees"
       ],
       "prerequisites": [
         "CMPSC 131"
@@ -59,7 +907,9 @@
         "Java",
         "OOP",
         "Web Development",
-        "MVC Architecture"
+        "Software Design",
+        "Inheritance",
+        "Polymorphism"
       ],
       "prerequisites": [
         "CMPSC 132"
@@ -67,7 +917,7 @@
       "career_relevance": [
         "Software Engineer",
         "Web Developer",
-        "Full Stack Developer"
+        "Backend Engineer"
       ]
     },
     {
@@ -77,9 +927,9 @@
       "skills": [
         "C",
         "Linux",
-        "Systems Design",
         "Memory Management",
-        "Concurrency"
+        "Operating Systems Concepts",
+        "Low-level Programming"
       ],
       "prerequisites": [
         "CMPSC 221"
@@ -87,18 +937,19 @@
       "career_relevance": [
         "Systems Engineer",
         "Backend Engineer",
-        "DevOps Engineer"
+        "Embedded Systems"
       ]
     },
     {
       "code": "CMPSC 360",
-      "name": "Discrete Mathematics",
+      "name": "Discrete Mathematics for Computer Science",
       "department": "Computer Science",
       "skills": [
-        "Logic",
         "Proof Techniques",
         "Graph Theory",
-        "Combinatorics"
+        "Logic",
+        "Combinatorics",
+        "Discrete Math"
       ],
       "prerequisites": [
         "CMPSC 132",
@@ -106,8 +957,8 @@
       ],
       "career_relevance": [
         "Software Engineer",
-        "ML Engineer",
-        "Research Scientist"
+        "Research",
+        "Algorithm Designer"
       ]
     },
     {
@@ -117,8 +968,9 @@
       "skills": [
         "SQL",
         "Database Design",
+        "Data Modeling",
         "Query Optimization",
-        "Data Modeling"
+        "Relational Databases"
       ],
       "prerequisites": [
         "CMPSC 221"
@@ -126,8 +978,7 @@
       "career_relevance": [
         "Data Engineer",
         "Backend Engineer",
-        "Data Analyst",
-        "Product Manager"
+        "Full Stack Developer"
       ]
     },
     {
@@ -137,8 +988,9 @@
       "skills": [
         "AI",
         "Search Algorithms",
+        "Machine Learning",
         "Knowledge Representation",
-        "Machine Learning Basics"
+        "Natural Language Processing"
       ],
       "prerequisites": [
         "CMPSC 360"
@@ -156,9 +1008,9 @@
       "skills": [
         "Machine Learning",
         "Neural Networks",
-        "Supervised Learning",
-        "Unsupervised Learning",
-        "Python"
+        "Deep Learning",
+        "scikit-learn",
+        "Model Evaluation"
       ],
       "prerequisites": [
         "CMPSC 360",
@@ -167,8 +1019,7 @@
       "career_relevance": [
         "ML Engineer",
         "Data Scientist",
-        "AI Researcher",
-        "Product Manager"
+        "AI Researcher"
       ]
     },
     {
@@ -176,10 +1027,11 @@
       "name": "Programming Language Concepts",
       "department": "Computer Science",
       "skills": [
+        "Programming Languages",
+        "Compilers",
         "Functional Programming",
-        "Type Systems",
         "Language Design",
-        "Compilers"
+        "Parsing"
       ],
       "prerequisites": [
         "CMPSC 360"
@@ -187,7 +1039,26 @@
       "career_relevance": [
         "Software Engineer",
         "Compiler Engineer",
-        "PL Researcher"
+        "Research"
+      ]
+    },
+    {
+      "code": "CMPSC 463",
+      "name": "Introduction to Computer and Network Security",
+      "department": "Computer Science",
+      "skills": [
+        "Cybersecurity",
+        "Network Security",
+        "Cryptography",
+        "Vulnerability Analysis"
+      ],
+      "prerequisites": [
+        "CMPSC 360"
+      ],
+      "career_relevance": [
+        "Security Engineer",
+        "Cybersecurity Analyst",
+        "Software Engineer"
       ]
     },
     {
@@ -195,37 +1066,59 @@
       "name": "Data Structures and Algorithms",
       "department": "Computer Science",
       "skills": [
-        "Advanced Algorithms",
-        "Dynamic Programming",
         "Graph Algorithms",
-        "Complexity Analysis"
+        "Dynamic Programming",
+        "Algorithm Analysis",
+        "Advanced Data Structures",
+        "Complexity Theory"
       ],
       "prerequisites": [
         "CMPSC 360"
       ],
       "career_relevance": [
         "Software Engineer",
-        "Backend Engineer",
-        "Quantitative Developer"
+        "FAANG",
+        "Algorithm Designer"
       ]
     },
     {
       "code": "CMPSC 473",
-      "name": "Operating Systems Design",
+      "name": "Operating Systems Design and Construction",
       "department": "Computer Science",
       "skills": [
-        "OS Concepts",
-        "Process Management",
+        "Operating Systems",
+        "Concurrency",
+        "File Systems",
         "Memory Management",
-        "File Systems"
+        "Synchronization"
       ],
       "prerequisites": [
         "CMPSC 311"
       ],
       "career_relevance": [
         "Systems Engineer",
-        "Infrastructure Engineer",
-        "DevOps Engineer"
+        "Embedded Systems",
+        "Cloud Infrastructure"
+      ]
+    },
+    {
+      "code": "CMPSC 475",
+      "name": "Software Design",
+      "department": "Computer Science",
+      "skills": [
+        "Design Patterns",
+        "Architecture",
+        "Microservices",
+        "System Design",
+        "API Design"
+      ],
+      "prerequisites": [
+        "CMPSC 221"
+      ],
+      "career_relevance": [
+        "Software Architect",
+        "Senior Engineer",
+        "Full Stack Developer"
       ]
     },
     {
@@ -233,37 +1126,59 @@
       "name": "Software Engineering",
       "department": "Computer Science",
       "skills": [
+        "Software Engineering",
         "Agile",
-        "Software Design",
         "Testing",
         "Project Management",
-        "Teamwork"
+        "System Design",
+        "Team Collaboration"
       ],
       "prerequisites": [
         "CMPSC 221"
       ],
       "career_relevance": [
         "Software Engineer",
-        "Product Manager",
-        "Engineering Manager"
+        "Team Lead",
+        "Product Manager"
+      ]
+    },
+    {
+      "code": "CMPSC 487W",
+      "name": "Software Project Management",
+      "department": "Computer Science",
+      "skills": [
+        "Project Leadership",
+        "Agile",
+        "Scrum",
+        "Team Collaboration",
+        "Risk Management"
+      ],
+      "prerequisites": [
+        "CMPSC 483W"
+      ],
+      "career_relevance": [
+        "Software Engineer",
+        "Engineering Manager",
+        "Product Manager"
       ]
     },
     {
       "code": "CMPSC 497",
-      "name": "Capstone Project",
+      "name": "Senior Capstone Project",
       "department": "Computer Science",
       "skills": [
         "Project Leadership",
         "Full Stack Development",
-        "Presentation",
-        "Technical Writing"
+        "System Design",
+        "Communication",
+        "Portfolio"
       ],
       "prerequisites": [
-        "Senior Standing"
+        "CMPSC 483W"
       ],
       "career_relevance": [
         "Software Engineer",
-        "Product Manager",
+        "Full Stack Developer",
         "Tech Lead"
       ]
     },
@@ -272,28 +1187,29 @@
       "name": "Introduction to Data Sciences",
       "department": "Data Sciences",
       "skills": [
-        "Data Analysis",
+        "Data Science Concepts",
         "Python",
+        "Data Literacy",
         "Visualization",
-        "Statistical Thinking"
+        "Data Ethics"
       ],
       "prerequisites": [],
       "career_relevance": [
         "Data Scientist",
         "Data Analyst",
-        "Business Analyst"
+        "ML Engineer"
       ]
     },
     {
       "code": "DS 220",
-      "name": "Data Management for Data Sciences",
+      "name": "Data Context and Computing",
       "department": "Data Sciences",
       "skills": [
-        "SQL",
-        "Data Modeling",
-        "ETL",
-        "Database Design",
-        "Data Wrangling"
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Data Processing",
+        "Jupyter Notebooks"
       ],
       "prerequisites": [
         "CMPSC 131"
@@ -306,37 +1222,57 @@
     },
     {
       "code": "DS 310",
-      "name": "Data Wrangling and Visualization",
+      "name": "Data Management for Data Sciences",
       "department": "Data Sciences",
       "skills": [
-        "Pandas",
-        "Data Cleaning",
-        "Matplotlib",
-        "Tableau",
-        "Data Storytelling"
+        "SQL",
+        "Database Management",
+        "NoSQL",
+        "Data Pipeline",
+        "ETL"
       ],
       "prerequisites": [
         "DS 200"
       ],
       "career_relevance": [
-        "Data Analyst",
+        "Data Engineer",
         "Data Scientist",
-        "Business Analyst",
-        "Product Manager"
+        "Data Analyst"
       ]
     },
     {
-      "code": "DS 410",
-      "name": "Applied Machine Learning",
+      "code": "DS 320",
+      "name": "Algorithms for Data Sciences",
+      "department": "Data Sciences",
+      "skills": [
+        "Algorithm Design",
+        "Python",
+        "Complexity Analysis",
+        "Data Science Algorithms"
+      ],
+      "prerequisites": [
+        "DS 220",
+        "MATH 220"
+      ],
+      "career_relevance": [
+        "Data Scientist",
+        "ML Engineer",
+        "Data Engineer"
+      ]
+    },
+    {
+      "code": "DS 340",
+      "name": "Introduction to Machine Learning and AI",
       "department": "Data Sciences",
       "skills": [
         "Machine Learning",
-        "Scikit-learn",
+        "scikit-learn",
         "Feature Engineering",
-        "Model Evaluation"
+        "Model Evaluation",
+        "Supervised Learning"
       ],
       "prerequisites": [
-        "DS 310",
+        "DS 220",
         "STAT 318"
       ],
       "career_relevance": [
@@ -346,408 +1282,290 @@
       ]
     },
     {
+      "code": "DS 410",
+      "name": "Data Science Practicum",
+      "department": "Data Sciences",
+      "skills": [
+        "End-to-End ML",
+        "Data Engineering",
+        "Model Deployment",
+        "Business Problem Solving",
+        "MLOps"
+      ],
+      "prerequisites": [
+        "DS 310",
+        "STAT 318"
+      ],
+      "career_relevance": [
+        "Data Scientist",
+        "ML Engineer",
+        "Data Engineer"
+      ]
+    },
+    {
+      "code": "DS 420",
+      "name": "Deep Learning",
+      "department": "Data Sciences",
+      "skills": [
+        "Deep Learning",
+        "Neural Networks",
+        "PyTorch",
+        "TensorFlow",
+        "Computer Vision",
+        "NLP"
+      ],
+      "prerequisites": [
+        "DS 340",
+        "MATH 220"
+      ],
+      "career_relevance": [
+        "ML Engineer",
+        "AI Researcher",
+        "Data Scientist"
+      ]
+    },
+    {
+      "code": "IST 110",
+      "name": "Information, People and Technology",
+      "department": "IST",
+      "skills": [
+        "Information Systems",
+        "Technology Concepts",
+        "Digital Literacy",
+        "Systems Thinking"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "IT Manager",
+        "Business Analyst",
+        "Consultant"
+      ]
+    },
+    {
       "code": "IST 210",
       "name": "Organization of Data",
       "department": "IST",
       "skills": [
+        "Database Design",
         "SQL",
-        "Relational Databases",
-        "Data Architecture",
-        "ER Diagrams"
+        "Data Modeling",
+        "ER Diagrams",
+        "Relational Databases"
       ],
       "prerequisites": [],
       "career_relevance": [
-        "Data Analyst",
-        "Data Engineer",
+        "Database Admin",
         "Business Analyst",
-        "Product Manager"
+        "Data Analyst"
+      ]
+    },
+    {
+      "code": "IST 230",
+      "name": "Language, Logic, and Discrete Mathematics",
+      "department": "IST",
+      "skills": [
+        "Logic",
+        "Discrete Math",
+        "Proof Techniques",
+        "Boolean Algebra"
+      ],
+      "prerequisites": [
+        "IST 110"
+      ],
+      "career_relevance": [
+        "Software Developer",
+        "Systems Analyst"
       ]
     },
     {
       "code": "IST 256",
-      "name": "Web Design and Development",
+      "name": "Application Development for the Web",
       "department": "IST",
       "skills": [
-        "HTML",
-        "CSS",
+        "Web Development",
         "JavaScript",
-        "Responsive Design",
-        "UI/UX"
+        "HTML/CSS",
+        "APIs",
+        "Front-end Development"
       ],
       "prerequisites": [],
       "career_relevance": [
         "Web Developer",
-        "Frontend Engineer",
-        "UX Designer"
+        "Software Engineer",
+        "UX Developer"
       ]
     },
     {
-      "code": "IST 261",
-      "name": "Application Programming",
+      "code": "IST 311",
+      "name": "Information Systems Integration",
       "department": "IST",
       "skills": [
-        "Java",
-        "Mobile Development",
-        "API Design",
-        "Software Development"
+        "Systems Integration",
+        "APIs",
+        "Enterprise Architecture",
+        "Cloud Computing"
       ],
       "prerequisites": [
-        "IST 140"
+        "IST 210",
+        "IST 256"
       ],
       "career_relevance": [
-        "Software Engineer",
-        "Mobile Developer",
-        "Full Stack Developer"
+        "Systems Architect",
+        "IT Consultant",
+        "Business Analyst"
       ]
     },
     {
-      "code": "STAT 200",
-      "name": "Elementary Statistics",
-      "department": "Statistics",
+      "code": "IST 331",
+      "name": "Life Cycle of a Security Threat",
+      "department": "IST",
       "skills": [
-        "Statistics",
-        "Probability Basics",
-        "Hypothesis Testing",
-        "Data Interpretation"
+        "Cybersecurity",
+        "Threat Analysis",
+        "Security Operations",
+        "Incident Response",
+        "SIEM"
       ],
       "prerequisites": [
-        "MATH 022"
+        "IST 210"
       ],
       "career_relevance": [
-        "Data Analyst",
-        "Business Analyst",
-        "Researcher",
-        "Product Manager"
+        "Cybersecurity Analyst",
+        "Security Engineer",
+        "CISO"
       ]
     },
     {
-      "code": "STAT 318",
-      "name": "Elementary Probability",
-      "department": "Statistics",
+      "code": "IST 402",
+      "name": "Emerging Issues in Information Sciences",
+      "department": "IST",
       "skills": [
-        "Probability",
-        "Statistics",
-        "Data Analysis",
-        "Random Variables"
-      ],
-      "prerequisites": [
-        "MATH 141"
-      ],
-      "career_relevance": [
-        "Data Scientist",
-        "Quantitative Analyst",
-        "ML Engineer",
-        "Product Manager"
-      ]
-    },
-    {
-      "code": "STAT 380",
-      "name": "Applied Regression Analysis",
-      "department": "Statistics",
-      "skills": [
-        "Regression",
-        "Statistical Modeling",
-        "R Programming",
-        "Predictive Analytics"
-      ],
-      "prerequisites": [
-        "STAT 200"
-      ],
-      "career_relevance": [
-        "Data Scientist",
-        "Statistician",
-        "Quantitative Analyst"
-      ]
-    },
-    {
-      "code": "MATH 140",
-      "name": "Calculus I",
-      "department": "Mathematics",
-      "skills": [
-        "Calculus",
-        "Mathematical Reasoning",
-        "Problem Solving"
-      ],
-      "prerequisites": [],
-      "career_relevance": [
-        "Engineer",
-        "Data Scientist",
-        "Quantitative Analyst"
-      ]
-    },
-    {
-      "code": "MATH 141",
-      "name": "Calculus II",
-      "department": "Mathematics",
-      "skills": [
-        "Calculus",
-        "Integration",
-        "Series",
-        "Mathematical Reasoning"
-      ],
-      "prerequisites": [
-        "MATH 140"
-      ],
-      "career_relevance": [
-        "Engineer",
-        "Data Scientist",
-        "Quantitative Analyst"
-      ]
-    },
-    {
-      "code": "MATH 220",
-      "name": "Matrices",
-      "department": "Mathematics",
-      "skills": [
-        "Linear Algebra",
-        "Matrix Operations",
-        "Vector Spaces"
-      ],
-      "prerequisites": [
-        "MATH 140"
-      ],
-      "career_relevance": [
-        "Data Scientist",
-        "ML Engineer",
-        "Quantitative Analyst",
-        "Engineer"
-      ]
-    },
-    {
-      "code": "MATH 230",
-      "name": "Calculus and Vector Analysis",
-      "department": "Mathematics",
-      "skills": [
-        "Multivariable Calculus",
-        "Vector Fields",
-        "Advanced Mathematics"
-      ],
-      "prerequisites": [
-        "MATH 141"
-      ],
-      "career_relevance": [
-        "Engineer",
-        "Physicist",
-        "ML Engineer"
-      ]
-    },
-    {
-      "code": "MGMT 301",
-      "name": "Basic Management Concepts",
-      "department": "Management",
-      "skills": [
-        "Leadership",
-        "Organizational Behavior",
-        "Strategic Thinking",
-        "Team Management"
-      ],
-      "prerequisites": [],
-      "career_relevance": [
-        "Product Manager",
-        "Project Manager",
-        "Management Consultant",
-        "Engineering Manager"
-      ]
-    },
-    {
-      "code": "MGMT 321",
-      "name": "Entrepreneurship and Small Business",
-      "department": "Management",
-      "skills": [
-        "Entrepreneurship",
-        "Business Planning",
-        "Startup Strategy",
+        "AI Ethics",
+        "Privacy",
+        "Digital Transformation",
+        "Technology Policy",
         "Innovation"
       ],
-      "prerequisites": [
-        "MGMT 301"
-      ],
-      "career_relevance": [
-        "Founder",
-        "Product Manager",
-        "Business Analyst",
-        "VC Analyst"
-      ]
-    },
-    {
-      "code": "MKT 301",
-      "name": "Principles of Marketing",
-      "department": "Marketing",
-      "skills": [
-        "Marketing Strategy",
-        "Consumer Behavior",
-        "Market Research",
-        "User Research",
-        "Branding"
-      ],
       "prerequisites": [],
       "career_relevance": [
-        "Product Manager",
-        "Marketing Manager",
-        "Brand Manager",
-        "Growth Engineer"
-      ]
-    },
-    {
-      "code": "MKT 330",
-      "name": "Digital Marketing",
-      "department": "Marketing",
-      "skills": [
-        "Digital Marketing",
-        "SEO",
-        "Analytics",
-        "Social Media Strategy",
-        "A/B Testing"
-      ],
-      "prerequisites": [
-        "MKT 301"
-      ],
-      "career_relevance": [
-        "Growth Engineer",
-        "Marketing Manager",
+        "Technology Consultant",
+        "Policy Analyst",
         "Product Manager"
       ]
     },
     {
-      "code": "FIN 301",
-      "name": "Corporation Finance",
-      "department": "Finance",
+      "code": "IST 440W",
+      "name": "Information Sciences and Technology Integration Project",
+      "department": "IST",
       "skills": [
-        "Financial Analysis",
-        "Valuation",
-        "Corporate Finance",
-        "Financial Modeling"
+        "Project Management",
+        "Systems Thinking",
+        "Technical Communication",
+        "Capstone"
       ],
       "prerequisites": [
-        "ACCTG 211"
+        "IST 311"
       ],
       "career_relevance": [
-        "Financial Analyst",
-        "Investment Banker",
-        "VC Analyst",
-        "CFO"
+        "IT Manager",
+        "Project Manager",
+        "Systems Analyst"
       ]
     },
     {
-      "code": "FIN 302",
-      "name": "Investments",
-      "department": "Finance",
+      "code": "EE 210",
+      "name": "Circuit Theory",
+      "department": "Electrical Engineering",
       "skills": [
-        "Portfolio Theory",
-        "Risk Management",
-        "Security Analysis",
-        "Asset Pricing"
+        "Circuit Analysis",
+        "Kirchhoff Laws",
+        "AC/DC Circuits",
+        "Ohm's Law"
       ],
       "prerequisites": [
-        "FIN 301"
+        "MATH 141",
+        "PHYS 212"
       ],
       "career_relevance": [
-        "Quantitative Analyst",
-        "Portfolio Manager",
-        "Hedge Fund Analyst"
+        "Electrical Engineer",
+        "Hardware Engineer"
       ]
     },
     {
-      "code": "ACCTG 211",
-      "name": "Financial Accounting",
-      "department": "Accounting",
+      "code": "EE 310",
+      "name": "Electronic Circuits",
+      "department": "Electrical Engineering",
       "skills": [
-        "Financial Statements",
-        "Accounting Principles",
-        "Financial Reporting"
+        "Transistors",
+        "Amplifiers",
+        "Op-Amps",
+        "Analog Electronics"
       ],
-      "prerequisites": [],
+      "prerequisites": [
+        "EE 210"
+      ],
       "career_relevance": [
-        "Accountant",
-        "Financial Analyst",
-        "Auditor",
-        "CFO"
+        "Electrical Engineer",
+        "Hardware Engineer",
+        "Embedded Systems"
       ]
     },
     {
-      "code": "SCM 301",
-      "name": "Supply Chain Management",
-      "department": "Supply Chain",
+      "code": "EE 350",
+      "name": "Signals and Systems",
+      "department": "Electrical Engineering",
       "skills": [
-        "Supply Chain",
-        "Operations Management",
-        "Logistics",
-        "Process Optimization"
+        "Signal Processing",
+        "Fourier Transform",
+        "Laplace Transform",
+        "Linear Systems"
       ],
-      "prerequisites": [],
+      "prerequisites": [
+        "EE 210",
+        "MATH 251"
+      ],
       "career_relevance": [
-        "Operations Manager",
-        "Supply Chain Analyst",
-        "Consultant"
+        "Signal Processing Engineer",
+        "Communications Engineer"
       ]
     },
     {
-      "code": "ECON 102",
-      "name": "Microeconomics",
-      "department": "Economics",
+      "code": "EE 420",
+      "name": "Embedded Systems",
+      "department": "Electrical Engineering",
       "skills": [
-        "Microeconomics",
-        "Market Analysis",
-        "Decision Making",
-        "Game Theory Basics"
+        "Embedded Programming",
+        "Microcontrollers",
+        "Real-time Systems",
+        "C",
+        "Assembly"
       ],
-      "prerequisites": [],
+      "prerequisites": [
+        "EE 310"
+      ],
       "career_relevance": [
-        "Economist",
-        "Business Analyst",
-        "Product Manager",
-        "Consultant"
+        "Embedded Systems Engineer",
+        "IoT Developer",
+        "Hardware Engineer"
       ]
     },
     {
-      "code": "ECON 104",
-      "name": "Macroeconomics",
-      "department": "Economics",
+      "code": "EE 440",
+      "name": "Communication Systems",
+      "department": "Electrical Engineering",
       "skills": [
-        "Macroeconomics",
-        "Economic Policy",
-        "Global Markets"
+        "Wireless Communications",
+        "Modulation",
+        "Information Theory",
+        "Antenna Design"
       ],
-      "prerequisites": [],
-      "career_relevance": [
-        "Economist",
-        "Policy Analyst",
-        "Financial Analyst"
-      ]
-    },
-    {
-      "code": "ENGL 015",
-      "name": "Rhetoric and Composition",
-      "department": "English",
-      "skills": [
-        "Technical Writing",
-        "Communication",
-        "Argumentation",
-        "Research"
+      "prerequisites": [
+        "EE 350"
       ],
-      "prerequisites": [],
       "career_relevance": [
-        "Any Role",
-        "Technical Writer",
-        "Content Strategist"
-      ]
-    },
-    {
-      "code": "CAS 100",
-      "name": "Effective Speech",
-      "department": "Communications",
-      "skills": [
-        "Public Speaking",
-        "Presentation",
-        "Communication",
-        "Persuasion"
-      ],
-      "prerequisites": [],
-      "career_relevance": [
-        "Product Manager",
-        "Manager",
-        "Consultant",
-        "Sales"
+        "Communications Engineer",
+        "RF Engineer",
+        "Wireless Engineer"
       ]
     },
     {
@@ -755,59 +1573,164 @@
       "name": "General Physics: Mechanics",
       "department": "Physics",
       "skills": [
-        "Physics",
-        "Problem Solving",
-        "Mathematical Modeling"
+        "Classical Mechanics",
+        "Newton's Laws",
+        "Energy Conservation",
+        "Kinematics"
       ],
       "prerequisites": [
         "MATH 140"
       ],
       "career_relevance": [
-        "Engineer",
-        "Researcher",
-        "Data Scientist"
-      ]
-    },
-    {
-      "code": "BIOL 110",
-      "name": "Biology: Basic Concepts",
-      "department": "Biology",
-      "skills": [
-        "Biology",
-        "Scientific Method",
-        "Lab Skills",
+        "Engineering",
+        "Physics",
         "Research"
-      ],
-      "prerequisites": [],
-      "career_relevance": [
-        "Biotech Researcher",
-        "Medical Professional",
-        "Research Scientist"
       ]
     },
     {
-      "code": "CHEM 110",
-      "name": "Chemical Principles I",
-      "department": "Chemistry",
+      "code": "PHYS 212",
+      "name": "General Physics: Electricity and Magnetism",
+      "department": "Physics",
       "skills": [
-        "Chemistry",
-        "Lab Techniques",
-        "Scientific Analysis"
+        "Electromagnetism",
+        "Electric Fields",
+        "Magnetic Fields",
+        "Maxwell's Equations"
       ],
-      "prerequisites": [],
+      "prerequisites": [
+        "PHYS 211",
+        "MATH 141"
+      ],
       "career_relevance": [
-        "Chemist",
-        "Biotech Researcher",
-        "Pharmaceutical Scientist"
+        "Electrical Engineering",
+        "Physics"
+      ]
+    },
+    {
+      "code": "ME 201",
+      "name": "Engineering Mechanics: Statics",
+      "department": "Mechanical Engineering",
+      "skills": [
+        "Statics",
+        "Free Body Diagrams",
+        "Structural Analysis",
+        "Force Analysis"
+      ],
+      "prerequisites": [
+        "PHYS 211",
+        "MATH 141"
+      ],
+      "career_relevance": [
+        "Mechanical Engineer",
+        "Civil Engineer",
+        "Structural Engineer"
+      ]
+    },
+    {
+      "code": "ME 204",
+      "name": "Engineering Mechanics: Dynamics",
+      "department": "Mechanical Engineering",
+      "skills": [
+        "Dynamics",
+        "Kinematics",
+        "Kinetics",
+        "Vibration Basics"
+      ],
+      "prerequisites": [
+        "ME 201",
+        "MATH 141"
+      ],
+      "career_relevance": [
+        "Mechanical Engineer",
+        "Robotics Engineer"
+      ]
+    },
+    {
+      "code": "ME 300",
+      "name": "Thermodynamics",
+      "department": "Mechanical Engineering",
+      "skills": [
+        "Thermodynamics",
+        "Heat Transfer",
+        "Energy Systems",
+        "Entropy"
+      ],
+      "prerequisites": [
+        "PHYS 211",
+        "MATH 141"
+      ],
+      "career_relevance": [
+        "Mechanical Engineer",
+        "Energy Engineer"
+      ]
+    },
+    {
+      "code": "ME 340",
+      "name": "Fluid Mechanics",
+      "department": "Mechanical Engineering",
+      "skills": [
+        "Fluid Dynamics",
+        "Bernoulli Equation",
+        "Pipe Flow",
+        "Turbulence"
+      ],
+      "prerequisites": [
+        "ME 300",
+        "MATH 230"
+      ],
+      "career_relevance": [
+        "Mechanical Engineer",
+        "Aerospace Engineer",
+        "Chemical Engineer"
+      ]
+    },
+    {
+      "code": "ME 360",
+      "name": "Machine Design",
+      "department": "Mechanical Engineering",
+      "skills": [
+        "CAD",
+        "Stress Analysis",
+        "Fatigue Analysis",
+        "Design for Manufacturing"
+      ],
+      "prerequisites": [
+        "ME 204"
+      ],
+      "career_relevance": [
+        "Mechanical Engineer",
+        "Design Engineer",
+        "Product Engineer"
+      ]
+    },
+    {
+      "code": "ME 440",
+      "name": "Mechanical Vibrations",
+      "department": "Mechanical Engineering",
+      "skills": [
+        "Vibration Analysis",
+        "Modal Analysis",
+        "Control Systems Intro",
+        "Signal Processing"
+      ],
+      "prerequisites": [
+        "ME 204",
+        "MATH 251"
+      ],
+      "career_relevance": [
+        "Mechanical Engineer",
+        "Aerospace Engineer"
       ]
     },
     {
       "code": "IE 302",
-      "name": "Engineering Economics",
+      "name": "Engineering Economy",
       "department": "Industrial Engineering",
       "skills": [
         "Engineering Economics",
         "Cost Analysis",
+        "NPV",
+        "ROI",
         "Decision Analysis"
       ],
       "prerequisites": [
@@ -815,8 +1738,8 @@
       ],
       "career_relevance": [
         "Industrial Engineer",
-        "Operations Analyst",
-        "Management Consultant"
+        "Operations Manager",
+        "Consultant"
       ]
     },
     {
@@ -826,2417 +1749,208 @@
       "skills": [
         "Quality Control",
         "Six Sigma",
-        "Process Improvement",
-        "Statistical Process Control"
+        "Statistical Process Control",
+        "Process Capability"
       ],
       "prerequisites": [
         "STAT 200"
       ],
       "career_relevance": [
         "Quality Engineer",
-        "Process Engineer",
+        "Operations Manager",
+        "Manufacturing Engineer"
+      ]
+    },
+    {
+      "code": "IE 340",
+      "name": "Work Design and Human Factors",
+      "department": "Industrial Engineering",
+      "skills": [
+        "Ergonomics",
+        "Human Factors",
+        "Process Design",
+        "Time and Motion Study"
+      ],
+      "prerequisites": [
+        "IE 302"
+      ],
+      "career_relevance": [
+        "Industrial Engineer",
+        "UX Researcher",
         "Operations Manager"
       ]
     },
     {
-      "code": "ME 300",
-      "name": "Engineering Thermodynamics",
-      "department": "Mechanical Engineering",
+      "code": "IE 407",
+      "name": "Operations Research",
+      "department": "Industrial Engineering",
       "skills": [
-        "Thermodynamics",
-        "Energy Systems",
-        "Heat Transfer"
+        "Linear Programming",
+        "Optimization",
+        "Integer Programming",
+        "Simulation"
       ],
       "prerequisites": [
-        "PHYS 211",
-        "MATH 230"
+        "IE 302",
+        "STAT 200",
+        "MATH 220"
       ],
       "career_relevance": [
-        "Mechanical Engineer",
-        "Energy Engineer",
-        "HVAC Engineer"
+        "Operations Research Analyst",
+        "Data Scientist",
+        "Supply Chain Analyst"
       ]
     },
     {
-      "code": "CYBER 262",
-      "name": "Cybersecurity Fundamentals",
-      "department": "Cybersecurity",
+      "code": "IE 421",
+      "name": "Production and Inventory Systems",
+      "department": "Industrial Engineering",
       "skills": [
-        "Cybersecurity",
-        "Network Security",
-        "Risk Assessment",
-        "Ethical Hacking"
-      ],
-      "prerequisites": [],
-      "career_relevance": [
-        "Security Engineer",
-        "Penetration Tester",
-        "Security Analyst"
-      ]
-    },
-    {
-      "code": "BI 301",
-      "name": "Quantitative Business Analysis",
-      "department": "Business Intelligence",
-      "skills": [
-        "Business Analytics",
-        "Data Visualization",
-        "Excel Modeling",
-        "Decision Analysis"
+        "Production Planning",
+        "Inventory Management",
+        "Scheduling",
+        "Just-in-Time"
       ],
       "prerequisites": [
+        "IE 302",
         "STAT 200"
       ],
       "career_relevance": [
-        "Business Analyst",
-        "Data Analyst",
-        "Consultant",
-        "Product Manager"
+        "Operations Manager",
+        "Supply Chain Manager",
+        "Manufacturing Engineer"
       ]
     },
     {
-      "code": "CMPSC 100",
-      "name": "Computer Fundamentals and Applications 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 101",
-      "name": "Introduction to Programming 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 200",
-      "name": ", CMPSC\u00a0201",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 201",
-      "name": "Enforced Prerequisite: MATH\u00a021",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 102",
-      "name": "Introduction to Visual Programming 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 111",
-      "name": "Logic for Computer Science 1 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 111S",
-      "name": "Logic for Computer Science (1)Computer Science provides the",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 110",
-      "name": "or Enforced Concurrent at Enrollment: MATH\u00a0140",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 122",
-      "name": "Intermediate Programming 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PHIL 150N",
-      "name": "General Education: Humanities (GH) General Education: Social and Behavioral Scien (GS)",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 197",
-      "name": "Special Topics 1-9 Credits/Maximum of 9 CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 199",
-      "name": "Foreign Studies 1-12 Credits/Maximum of 12 CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 140A",
-      "name": "or MATH\u00a0140B or MATH\u00a0140E",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 140E",
-      "name": "or MATH\u00a0140G",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 140G",
-      "name": "or MATH\u00a0140H",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 140H",
-      "name": "Enforced Concurrent at Enrollment: MATH\u00a0141",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 141B",
-      "name": "or MATH\u00a0141E",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 141E",
-      "name": "or MATH\u00a0141G",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 141G",
-      "name": "or MATH\u00a0141H",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 141H",
-      "name": "Recommended Preparation: MATH\u00a0220",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 203",
-      "name": "Introduction to Spreadsheets and Databases 4 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 204",
-      "name": "Introduction to Computational Sciences Programming 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "GAME 250",
-      "name": "/ CMPSC\u00a0208",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 208",
-      "name": "Technical Game Development. First, students learn about game",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 297",
-      "name": "Special Topics 1-9 Credits/Maximum of 9 CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 299",
-      "name": "Foreign Studies 1-12 Credits/Maximum of 12 CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 301",
-      "name": "Event Driven Programming for Computational Sciences 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 205",
-      "name": "CMPSC 302: Intermediate Visual Programming 3 Credits",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 302",
-      "name": "Intermediate Visual Programming (3) This course forms the",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 313C",
-      "name": "MPSC 313 Assembly Language Programming (3)This is a",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 313",
-      "name": ", the student should be able to: explain",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 422",
-      "name": ", CMPSC\u00a0472 , and CMPSC\u00a0460",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 460",
-      "name": ", as well as in the elective courses",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 428",
-      "name": "and CMPSC 470 .No special facilities are required",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 312",
-      "name": "CMPSC 315: Computer Systems I 4 Credits",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPEN 270",
-      "name": "or ( CMPEN\u00a0271",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPEN 271",
-      "name": "and CMPEN\u00a0275",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPEN 275",
-      "name": ")) and CMPSC\u00a0222",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 222",
-      "name": "CMPSC 316: Computer Systems II 4 Credits",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 315",
-      "name": "CMPSC 320: Software Engineering Principles 3 Credits",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 348",
-      "name": "Data Science and Machine Learning for Computational Sciences 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 414",
-      "name": "or MATH\u00a0418",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 418",
-      "name": "or STAT\u00a0414",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "STAT 414",
-      "name": "or STAT\u00a0418",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "STAT 418",
-      "name": "or EE\u00a0465",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "EE 465",
-      "name": ") CMPSC 360: Discrete Mathematics for Computer Science",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 397",
-      "name": "Special Topics 1-9 Credits/Maximum of 9 CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 399",
-      "name": "Foreign Studies 1-12 Credits/Maximum of 12 CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 410",
-      "name": "Programming Models for Big Data 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 462",
-      "name": "or CMPSC\u00a0465",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 463",
-      "name": "CMPSC 414: Contest Programming 1 Credits/Maximum of 4",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 330",
-      "name": "CMPSC 421: Net-centric Computing 3 Credits",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 421",
-      "name": "Net-centric Computing (3) This course will build on",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "SWENG 311",
-      "name": "CMPSC 430: Database Design 3 Credits",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 430",
-      "name": "the student should be able to: (1) Demonstrate",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ENGL 202C",
-      "name": "Writing Across the Curriculum CMPSC 432: Exploratory Data Mining",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 432",
-      "name": "Exploratory Data Mining 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 436",
-      "name": "Communications and Networking 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 436C",
-      "name": "MPSC 436 Communications and Networking (3)This course introduces",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 440",
-      "name": "Data-driven Security Analytics 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 335",
-      "name": "or CMPEN\u00a0461",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPEN 461",
-      "name": "CMPSC 441: Artificial Intelligence 3 Credits",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 441",
-      "name": "Artificial Intelligence (3) The primary goals of this",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "DS 442",
-      "name": "CMPSC 443: Introduction to Computer and Network Security 3 Credits",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPEN 362",
-      "name": "Enforced Concurrent at Enrollment: CMPSC\u00a0473",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 444",
-      "name": "Secure Programming (3) This course presents an overview",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 446",
-      "name": "Data Mining 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 318",
-      "name": "or STAT\u00a0318",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 447",
-      "name": "Software Security 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 443",
-      "name": "Recommended preparation: CMPSC\u00a0360",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "STAT 319",
-      "name": "or STAT\u00a0415",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "STAT 415",
-      "name": ") and ( CMPSC\u00a0122",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 449",
-      "name": "Foundations of Natural Language Processing 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 231",
-      "name": ") CMPSC 451: Numerical Computations",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 451",
-      "name": "Numerical Computations 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 451",
-      "name": "AND 455. Enforced Prerequisite at Enrollment",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 455",
-      "name": "Introduction to Numerical Analysis I 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 455",
-      "name": ". Enforced Prerequisite at Enrollment",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 202",
-      "name": "or CMPSC\u00a0121 or CMPSC\u00a0131",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 456",
-      "name": "Introduction to Numerical Analysis II 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 456",
-      "name": "Bachelor of Arts: Quantification CMPSC 457: Computer Graphics Algorithms",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 457",
-      "name": "Computer Graphics Algorithms 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 457C",
-      "name": "MPSC 457 Computer Graphics Algorithms I (3)Concepts and",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 469",
-      "name": "CMPSC 461: Programming Language Concepts 3 Credits",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 464",
-      "name": "Introduction to the Theory and Computation (3) CMPSC\u00a0464",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 311W",
-      "name": ") CMPSC 466: Introduction to Quantum Computation",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 466",
-      "name": "Introduction to Quantum Computation 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 467",
-      "name": "Factorization and Primality Testing 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 465",
-      "name": "may not schedule this course. Enforced Prerequisite at Enrollment",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 467",
-      "name": "Bachelor of Arts: Quantification CMPSC 469: Formal Languages with Applications",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 470",
-      "name": "Compiler Construction (3) The primary topics of this",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 472C",
-      "name": "MPSC 472 Operating Systems Concepts (3)A course on",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPEN 331",
-      "name": "CMPSC 474: Operating System & Systems Programming 3 Credits",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 476",
-      "name": "Systems Debugging 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 472",
-      "name": "or CMPSC\u00a0474",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 474",
-      "name": "or CMPEN\u00a0441",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPEN 441",
-      "name": "CMPSC 478: Advanced Algorithms 3 Credits",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 484",
-      "name": "Computer Science Senior Project I 2 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 487W",
-      "name": "Software Engineering and Design 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 488",
-      "name": "Computer Science Project 3 Credits CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 430",
-      "name": "or MATH\u00a0436",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 436",
-      "name": ") and ( STAT\u00a0318",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 494",
-      "name": "Senior Honors Thesis 1-6 Credits/Maximum of 6 CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 495",
-      "name": "Internship 1-18 Credits/Maximum of 18 CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 496",
-      "name": "Independent Studies 1-18 Credits/Maximum of 18 CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 499",
-      "name": "Foreign Studies 1-12 Credits/Maximum of 12 CMPSC",
-      "department": "Computer Science",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "DS 340W",
-      "name": "Applied Data Sciences 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "DS 435",
-      "name": "Ethical Issues in Data Science Practice 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "STAT 184",
-      "name": "Introduction to R 2",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "DS 440",
-      "name": "Data Sciences Capstone Course 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "DS 440W",
-      "name": "Data Science Capstone Requirements for the Option",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "DS 300",
-      "name": "Privacy and Security for Data Sciences 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "DS 305",
-      "name": "Algorithmic Methods and Tools 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "DS 320",
-      "name": "Data Integration 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "DS 330",
-      "name": "Visual Analytics for Data Sciences 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 495",
-      "name": "Internship 1",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "DS 402",
-      "name": "Emerging Trends in the Data Sciences DS\u00a0420",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "DS 420",
-      "name": "Network Analytics DS\u00a0441",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "DS 441",
-      "name": "Information Retrieval and Organization DS/CMPSC 442",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "DS 494",
-      "name": "Research Project IST\u00a0442",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 442",
-      "name": "Information Technology in an International Context SODA\u00a0308",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "SODA 308",
-      "name": "Research Design for Social Data Analytics Additional Courses:",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 230",
-      "name": "Language, Logic, and Discrete Mathematics MATH\u00a0311W",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 415",
-      "name": "Introduction to Mathematical Statistics 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "STAT 440",
-      "name": "Computational Statistics 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "STAT 462",
-      "name": "Applied Regression Analysis 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PA 168",
-      "name": "02 814-865-8947 advising@ist.psu.edu",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PA 190",
-      "name": "01 sgo7@psu.edu Suggested Academic Plan",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ENGL 202",
-      "name": "(GWS) \u2021 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 445",
-      "name": ", DS  420",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 494",
-      "name": "3 DS\u00a0442",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ENGL 137H",
-      "name": "/ CAS\u00a0137H",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CAS 137H",
-      "name": "in the fall semester and ENGL\u00a0138T",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ENGL 138T",
-      "name": "/ CAS\u00a0138T",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CAS 138T",
-      "name": "in the spring semester. These courses carry the",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CAS 100A",
-      "name": "/ CAS\u00a0100B",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CAS 100B",
-      "name": "/ CAS\u00a0100C",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CAS 100C",
-      "name": ". Each course is 3 credits. Advising Notes",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ASTRO 120",
-      "name": "The Big Bang Universe 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ASTRO 130",
-      "name": "Black Holes in the Universe 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ASTRO 140",
-      "name": "Life in the Universe 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ASTRO 291",
-      "name": "Astronomical Methods and the Solar System 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ASTRO 292",
-      "name": "Astronomy of the Distant Universe 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ASTRO 401",
-      "name": "Fundamentals of Planetary Science and Astronomy 4",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ASTRO 402W",
-      "name": "Astronomical Telescopes, Techniques, and Data Analysis 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ASTRO 496",
-      "name": "Independent Studies 1-3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "GEOSC 474",
-      "name": "Astrobiology 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PHYS 212",
-      "name": "General Physics:  Electricity and Magnetism 4",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PHYS 250",
-      "name": "Introductory Physics I 4",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PHYS 251",
-      "name": "Introductory Physics II 4",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "BA 301",
-      "name": "Finance 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FIN 100",
-      "name": "Introduction to Finance or",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "BA 302",
-      "name": "Supply Chains 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "BA 303",
-      "name": "Marketing 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MKTG 221W",
-      "name": "Contemporary American Marketing or",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MKTG 301",
-      "name": "Principles of Marketing or",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MKTG 301W",
-      "name": "Principles of Marketing BA\u00a0304",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "BA 304",
-      "name": "Management and Organization 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MGMT 100",
-      "name": "Survey of Management or",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MGMT 100W",
-      "name": "Survey of Management or",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MGMT 301W",
-      "name": "Basic Management Concepts BLAW\u00a0243",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "BLAW 243",
-      "name": "Legal Environment of Business 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IB 303",
-      "name": "International Business Operations 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "SCM 200",
-      "name": "Introduction to Statistics for Business 4",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 106",
-      "name": "Statistical Foundations for Econometrics 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 302",
-      "name": "Intermediate Microeconomic Analysis 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 304",
-      "name": "Intermediate Macroeconomic Analysis 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 315",
-      "name": "Labor Economics 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 323",
-      "name": "Public Finance 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 333",
-      "name": "International Economics 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 342",
-      "name": "Industrial Organization 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 402",
-      "name": "Decision Making and Strategy in Economics 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 407",
-      "name": "Political Economy 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 410",
-      "name": "Economics of Labor Markets 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 415",
-      "name": "The Economics of Global Climate Change 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 425",
-      "name": "Economics of Public Expenditures 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 428",
-      "name": "Environmental Economics 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 442",
-      "name": "Managerial Economics 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 445",
-      "name": "Health Economics 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 447",
-      "name": "Economics of Sports 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 471",
-      "name": "Growth and Development 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 479",
-      "name": "Economics of Matching 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "ECON 480",
-      "name": "Mathematical Economics 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "BMB 211",
-      "name": "Elementary Biochemistry 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "BMB 212",
-      "name": "Elementary Biochemistry Laboratory 1",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 105",
-      "name": "Food Facts and Fads 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 200",
-      "name": "Introductory Food Science 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 201",
-      "name": "Introductory Food Science Practicum 1",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 206",
-      "name": "3 FDSC\u00a0400",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 400",
-      "name": "Food Chemistry and Analysis (I) 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 403",
-      "name": "Sensory Data Collection & Analysis 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 404",
-      "name": "Sensory Evaluation of Foods 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 405",
-      "name": "Food Engineering Principles 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 406W",
-      "name": "Physiology of Nutrition 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 408",
-      "name": "Food Microbiology 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 409",
-      "name": "Laboratory in Food Microbiology 2",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 410",
-      "name": "Food Chemistry and Analysis (II) 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 413",
-      "name": "Science and Technology of Plant Foods 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 414",
-      "name": "Science and Technology of Dairy Foods 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 415",
-      "name": "Science and Technology of Muscle Foods 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 430",
-      "name": "3 FDSC\u00a0444",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "FDSC 444",
-      "name": "Arguing about Food 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MICRB 201",
-      "name": "Introductory Microbiology 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MICRB 202",
-      "name": "Introductory Microbiology Laboratory 2",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "STAT 240",
-      "name": "Introduction to Biometry 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "STAT 250",
-      "name": "Introduction to Biostatistics 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "HCDD 113",
-      "name": "Foundations of Human-Centered Design and Development 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "HCDD 113S",
-      "name": "Foundations of Human-Centered Design and Development FYS 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "HCDD 264",
-      "name": "Design Practice in Human-Centered Design and Development 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "HCDD 311",
-      "name": "Object-Oriented Design and Software Applications 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 311",
-      "name": "HCDD\u00a0331 Foundations of Human-Centered Design",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 331",
-      "name": "HCDD\u00a0340 Human-Centered Design for Mobile Computing",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "HCDD 364W",
-      "name": "Methods for Studying Users 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "HCDD 411",
-      "name": "Distributed-Object Computing 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 411",
-      "name": "HCDD\u00a0412 The Engineering of Complex Software Systems",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 412",
-      "name": "HCDD\u00a0413 Usability Engineering",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 413",
-      "name": "IST\u00a0140 Introduction to Application Development",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 220",
-      "name": "Networking and Telecommunications 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 240",
-      "name": "Introduction to Computer Languages 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 242",
-      "name": "Intermediate & Object-Oriented Application Development 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 402",
-      "name": "Emerging Issues and Technologies 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CYBER 100",
-      "name": "Computer Systems Literacy 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CYBER 100S",
-      "name": "Computer Systems Literacy 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CYBER 221",
-      "name": "Overview of Information Security 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "SRA 221",
-      "name": "CYBER\u00a0262 Cyber-Defense Studio",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CYBER 451",
-      "name": "Network Security 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 451",
-      "name": "CYBER\u00a0454 Computer and Cyber Forensics",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 454",
-      "name": "DS\u00a0402 Emerging Trends in the Data Sciences",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 140",
-      "name": "Introduction to Application Development 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "IST 456",
-      "name": "3 SRA\u00a0111",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "SRA 111",
-      "name": "Introduction to Security and Risk Analysis 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "SRA 211",
-      "name": "Threat of Terrorism and Crime 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "SRA 231",
-      "name": "Decision Theory and Analysis 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "SRA 365",
-      "name": "Statistics for Security and Risk Analysis 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "SRA 450",
-      "name": "Cyber-Crime and Cyber-Warfare 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "SRA 468",
-      "name": "Spatial Analysis of Risks 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "SRA 480",
-      "name": "Crisis Informatics 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "BIOL 141",
-      "name": "Introduction to Human Physiology 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
+      "code": "IE 450",
+      "name": "Systems Simulation",
+      "department": "Industrial Engineering",
+      "skills": [
+        "Discrete Event Simulation",
+        "Monte Carlo Methods",
+        "Arena/SimPy",
+        "Systems Modeling"
+      ],
+      "prerequisites": [
+        "STAT 318",
+        "IE 302"
+      ],
+      "career_relevance": [
+        "Operations Research Analyst",
+        "Data Scientist",
+        "Industrial Engineer"
+      ]
+    },
+    {
+      "code": "BIOL 110",
+      "name": "Basic Concepts of Biology",
+      "department": "Biology",
+      "skills": [
+        "Cell Biology",
+        "Genetics Basics",
+        "Evolution",
+        "Scientific Method"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "Biologist",
+        "Pre-med",
+        "Research"
+      ]
+    },
+    {
+      "code": "BIOL 230",
+      "name": "Genetics",
+      "department": "Biology",
+      "skills": [
+        "Genetics",
+        "DNA Replication",
+        "Gene Expression",
+        "Inheritance"
+      ],
+      "prerequisites": [
+        "BIOL 110"
+      ],
+      "career_relevance": [
+        "Biologist",
+        "Geneticist",
+        "Pre-med"
+      ]
+    },
+    {
+      "code": "BIOL 240",
+      "name": "Cell Biology",
+      "department": "Biology",
+      "skills": [
+        "Cell Biology",
+        "Biochemistry",
+        "Molecular Biology",
+        "Cell Signaling"
+      ],
+      "prerequisites": [
+        "BIOL 110",
+        "CHEM 110"
+      ],
+      "career_relevance": [
+        "Biologist",
+        "Pre-med",
+        "Biotech"
+      ]
+    },
+    {
+      "code": "CHEM 110",
+      "name": "Chemical Principles I",
+      "department": "Chemistry",
+      "skills": [
+        "General Chemistry",
+        "Stoichiometry",
+        "Chemical Bonding",
+        "Thermochemistry"
+      ],
+      "prerequisites": [],
+      "career_relevance": [
+        "Chemist",
+        "Pre-med",
+        "Materials Science"
+      ]
     },
     {
       "code": "CHEM 112",
-      "name": "Chemical Principles II 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CHEM 202",
-      "name": "Fundamentals of Organic Chemistry I 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
+      "name": "Chemical Principles II",
+      "department": "Chemistry",
+      "skills": [
+        "Electrochemistry",
+        "Kinetics",
+        "Equilibrium",
+        "Organic Chemistry Intro"
+      ],
+      "prerequisites": [
+        "CHEM 110"
+      ],
+      "career_relevance": [
+        "Chemist",
+        "Pre-med",
+        "Materials Science"
+      ]
     },
     {
       "code": "CHEM 210",
-      "name": "Organic Chemistry I 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 100",
-      "name": "Nutrition Applications for a Healthy Lifestyle 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 175N",
-      "name": "Healthy Food for All: Factors that Influence What",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 211R",
-      "name": "Applying Biochemistry to Nutrition 1",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 251",
-      "name": "Introductory Principles of Nutrition 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 358",
-      "name": "Assessment of Nutritional Status 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 360",
-      "name": "Nutrition Education and Behavior Change Theory 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 361",
-      "name": "Community and Public Health Nutrition 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 390",
-      "name": "Nutritional Biochemistry and Physiology 4",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 400",
-      "name": "Introduction to Nutrition Counseling 2",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 407",
-      "name": "Nutrition for Exercise and Sports 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 410",
-      "name": "Eating and Weight Disorders 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 421",
-      "name": "Biocultural Perspectives on Public Health Nutrition 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 425",
-      "name": "Global Nutrition Problems: Health, Science, and Ethics 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "NUTR 445",
-      "name": "Energy and Macronutrient Metabolism 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 100",
-      "name": "Introductory Psychology 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 200",
-      "name": "Elementary Statistics in Psychology 4",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 212",
-      "name": "Introduction to Developmental Psychology 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 221",
-      "name": "Introduction to Social Psychology 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 243",
-      "name": "Introduction to Well-being and Positive Psychology 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 253",
-      "name": "Introduction to Psychology of Perception 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 256",
-      "name": "Introduction to Cognitive Psychology 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 260",
-      "name": "Neurological Bases of Human Behavior 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 261",
-      "name": "Introduction to Psychology of Learning 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 270",
-      "name": "Introduction to Abnormal Psychology 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 370",
-      "name": "Psychology of the Differently-Abled 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 404",
-      "name": "Principles of Measurement 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 410",
-      "name": "Child Development 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 412",
-      "name": "Adolescence 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 413",
-      "name": "Cognitive Development 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 419",
-      "name": "Psychology and a Sustainable World 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 423",
-      "name": "Social Psychology of Interpersonal/Intergroup Relationships 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 424",
-      "name": "Applied Social Psychology 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 425",
-      "name": "Psychology of Human Emotion 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 441",
-      "name": "Health Psychology 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 449",
-      "name": "Basic Counseling Skills 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 452",
-      "name": "Learning and Memory 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 455",
-      "name": "Cognitive Neuroscience 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 456",
-      "name": "Advanced Cognitive Psychology 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 457",
-      "name": "Psychology of Language 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 458",
-      "name": "Visual Cognition 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 473",
-      "name": "Behavior Modification 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "PSYCH 484",
-      "name": "Work Attitudes and Motivation 3",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPEN 454",
-      "name": ", CMPSC\u00a0450",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "CMPSC 450",
-      "name": ", CMPSC\u00a0455",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 484",
-      "name": ", or MATH\u00a0452",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 452",
-      "name": "OPTION B: CMPSC\u00a0431W",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "EE 456",
-      "name": ", DS\u00a0441",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 486",
-      "name": ", MATH\u00a0448",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "MATH 448",
-      "name": ", STAT\u00a0416",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "STAT 416",
-      "name": ", STAT\u00a0440",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "STAT 460",
-      "name": ", STAT\u00a0461",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
-    },
-    {
-      "code": "STAT 461",
-      "name": ", or STAT\u00a0462",
-      "department": "Data Sciences",
-      "skills": [],
-      "prerequisites": [],
-      "career_relevance": []
+      "name": "Organic Chemistry I",
+      "department": "Chemistry",
+      "skills": [
+        "Organic Chemistry",
+        "Reaction Mechanisms",
+        "Functional Groups",
+        "Spectroscopy"
+      ],
+      "prerequisites": [
+        "CHEM 112"
+      ],
+      "career_relevance": [
+        "Chemist",
+        "Pre-med",
+        "Pharmaceutical"
+      ]
     }
   ]
 }

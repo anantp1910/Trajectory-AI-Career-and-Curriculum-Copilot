@@ -84,6 +84,7 @@ async def compute_full_analysis(
             text = extract_text_from_pdf(raw)
             if text:
                 resume_data = parse_resume(ai, text)
+                resume_data["text"] = text  # store raw text for frontend editor
                 resume_skills = resume_data.get("skills", [])
 
     # 2. Parse job listing
