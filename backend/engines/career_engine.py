@@ -10,18 +10,45 @@ def score_job_readiness(client, career_goal, skills_have, skill_gaps, job_requir
     # Try AI if available, otherwise fall back to deterministic scoring
     try:
         if client:
-            prompt = f"You are a career readiness assessor. Score how ready this student is for: {career_goal}\n\nStudent's current skills: {json.dumps(skills_have)}\nKnown skill gaps: {json.dumps(skill_gaps[:6])}\nJob requirements: {json.dumps(job_requirements) if job_requirements else 'Infer from career goal'}\n\nReturn JSON." 
+            schema_example = {
+                "overall_readiness": 65,
+                "readiness_after_plan": 85,
+                "skill_scores": [
+                    {"skill": "Python", "current_level": 80, "required_level": 75, "status": "strong", "note": "Solid foundation", "course_fix": None}
+                ],
+                "top_strengths": ["Python", "Git"],
+                "critical_gaps": ["Data Analysis", "SQL"],
+                "action_items": ["Take STAT 318 to address Data Analysis gap"]
+            }
+            prompt = (
+                f"You are a career readiness assessor. Score how ready this student is for: {career_goal}\n\n"
+                f"Student's current skills: {json.dumps(skills_have)}\n"
+                f"Known skill gaps: {json.dumps(skill_gaps[:6])}\n"
+                f"Job requirements: {json.dumps(job_requirements) if job_requirements else 'Infer from career goal'}\n\n"
+                f"Return ONLY a JSON object with EXACTLY this structure (no extra keys):\n"
+                f"{json.dumps(schema_example, indent=2)}\n\n"
+                f"Rules:\n"
+                f"- overall_readiness: integer 0-100\n"
+                f"- readiness_after_plan: integer 0-100, must be >= overall_readiness\n"
+                f"- skill_scores: array where status is one of: strong, ready, gap, critical\n"
+                f"- course_fix: a course code string or null\n"
+                f"- top_strengths, critical_gaps, action_items: arrays of strings"
+            )
             response = client.messages.create(
-                model="claude-sonnet-4-20250514", max_tokens=2000,
+                model="claude-sonnet-4-5", max_tokens=2000,
                 messages=[{"role": "user", "content": prompt}]
             )
             text = response.content[0].text
+            parsed = None
             try:
-                return json.loads(text)
-            except:
+                parsed = json.loads(text)
+            except Exception:
                 s, e = text.find('{'), text.rfind('}') + 1
                 if s != -1 and e > s:
-                    return json.loads(text[s:e])
+                    parsed = json.loads(text[s:e])
+            # Validate required fields before returning
+            if parsed and all(k in parsed for k in ("overall_readiness", "readiness_after_plan", "skill_scores")):
+                return parsed
     except Exception:
         # fall through to deterministic
         pass
