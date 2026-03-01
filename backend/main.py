@@ -21,6 +21,10 @@ if not API_KEY:
     raise RuntimeError("Missing ANTHROPIC_API_KEY. Put it in backend/.env or export it.")
 ai = Anthropic(api_key=API_KEY)
 
+import logging
+logger = logging.getLogger("trajectory")
+logging.basicConfig(level=logging.INFO)
+
 # ── Load courses ──
 data_dir = os.path.join(os.path.dirname(__file__), "data")
 merged_path = os.path.join(data_dir, "courses_merged.json")
@@ -114,6 +118,14 @@ async def compute_full_analysis(
         "resumeHighlights": resume_highlights,
         "resumeData": resume_data,
     }
+
+
+def _log_request_context(major, courses_taken, resume_file, job_url, job_text):
+    # lightweight logging to help debug per-request signals
+    try:
+        logger.info("Analyze request context: major=%s, courses_taken=%s, resume=%s, job_url=%s, job_text_len=%d", major, bool(courses_taken), bool(resume_file), bool(job_url), len(job_text or ""))
+    except Exception:
+        logger.info("Analyze request context: (failed to format context)")
 
 
 @app.post("/analyze/skillgraph")

@@ -35,6 +35,19 @@ def build_skill_graph(client, major, courses_taken, career_goal, resume_skills, 
   job_reqs = job_requirements or []
   job_skills = set()
 
+  # Narrow course pool by major when possible to avoid unrelated recommendations.
+  major_lower = (major or "").lower()
+  filtered_course_db = course_db
+  try:
+    if "computer" in major_lower or major_lower.strip() in ("cs", "c.s.", "computer science"):
+      filtered_course_db = [c for c in course_db if str(c.get("code", "")).upper().startswith("CMPSC") or "computer" in (c.get("department", "") or "").lower()]
+    elif major_lower:
+      # for other majors, prefer courses whose code or department contains the major token
+      token = major_lower.split()[0]
+      filtered_course_db = [c for c in course_db if token in (c.get("code", "") + " " + (c.get("department", "") or "")).lower()]
+  except Exception:
+    filtered_course_db = course_db
+
   # naive extraction: split requirement lines and pick nouns/key tokens
   for r in job_reqs:
     parts = re.split(r"[,;/()\\|\\-]", r)
@@ -54,7 +67,7 @@ def build_skill_graph(client, major, courses_taken, career_goal, resume_skills, 
 
   # Seed candidate skill list: union of resume, job skills, and common course skills
   common_skills = set()
-  for c in course_db:
+  for c in filtered_course_db:
     for sk in c.get("skills", []):
       common_skills.add(_normalize(sk))
 
@@ -86,10 +99,18 @@ def build_skill_graph(client, major, courses_taken, career_goal, resume_skills, 
       return min(90, 60 + int(len(skill_norm) * 3))
     # if student lists courses_taken containing related course codes, boost
     if courses_taken:
-      ct = [x.strip().lower() for x in courses_taken.split(",")]
-      for code in ct:
-        if code and code in skill_norm:
-          return 55
+      # parse provided course codes and check if any taken course teaches this skill
+      ct = [x.strip().upper() for x in courses_taken.split(",") if x.strip()]
+      try:
+        for code in ct:
+          # if the student took a course whose record contains this skill, boost have level
+          for course in filtered_course_db:
+            if course.get("code", "").upper() == code:
+              skills = [_normalize(k) for k in course.get("skills", [])]
+              if skill_norm in skills or any(skill_norm in s or s in skill_norm for s in skills):
+                return 70
+      except Exception:
+        pass
     return 20
 
   skills_chart = []
@@ -97,12 +118,27 @@ def build_skill_graph(client, major, courses_taken, career_goal, resume_skills, 
   for s in skill_targets:
     need = 80 if any(s in _normalize(r) for r in job_reqs) else 60
     have = have_level_for(s)
-    recommended_course = _find_course_for_skill(s, course_db)
+    recommended_course = _find_course_for_skill(s, filtered_course_db)
     source = "resume" if s in resume_set else ("career" if any(s in _normalize(r) for r in job_reqs) else "course")
-    skills_chart.append({"name": s.title(), "have": have, "need": need, "source": source, "recommended_course": recommended_course, "target_job": career_goal})
+    # human-friendly skill display (handle acronyms and common terms)
+    def _pretty_skill(k):
+      k = k.strip()
+      m = {
+        'seo': 'SEO', 'ab testing': 'A/B Testing', 'a b testing': 'A/B Testing',
+        'api': 'API', 'sql': 'SQL', 'ml': 'Machine Learning', 'ai': 'AI'
+      }
+      low = k.lower()
+      if low in m:
+        return m[low]
+      # capitalize common words
+      parts = [p.upper() if p.lower() in ('sql','api','ai','ml','seo') else p.title() for p in k.split()]
+      return ' '.join(parts)
+
+    display_name = _pretty_skill(s)
+    skills_chart.append({"name": display_name, "have": have, "need": need, "source": source, "recommended_course": recommended_course, "target_job": career_goal})
     if need - have >= 20:
       severity = "critical" if need - have >= 40 else "major"
-      gaps.append({"skill": s.title(), "have_level": have, "need_level": need, "gap_severity": severity, "recommended_course": recommended_course, "recommended_resource": None, "appears_in": "both" if source == "resume" and any(s in _normalize(r) for r in job_reqs) else source, "target_job": career_goal})
+      gaps.append({"skill": display_name, "have_level": have, "need_level": need, "gap_severity": severity, "recommended_course": recommended_course, "recommended_resource": None, "appears_in": "both" if source == "resume" and any(s in _normalize(r) for r in job_reqs) else source, "target_job": career_goal})
 
   # sort gaps by severity then size
   gaps = sorted(gaps, key=lambda g: (0 if g["gap_severity"] == "critical" else 1, -(g["need_level"] - g["have_level"])))

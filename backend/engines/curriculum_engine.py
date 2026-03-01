@@ -15,6 +15,18 @@ def generate_curriculum_plan(client, major, courses_taken, career_goal, skill_ga
     """
     taken = [c.strip().upper() for c in (courses_taken or "").split(",") if c.strip()]
 
+    # Narrow course pool by major when possible to avoid unrelated recommendations.
+    major_lower = (major or "").lower()
+    filtered_course_db = course_db
+    try:
+        if "computer" in major_lower or major_lower.strip() in ("cs", "c.s.", "computer science"):
+            filtered_course_db = [c for c in course_db if str(c.get("code", "")).upper().startswith("CMPSC") or "computer" in (c.get("department", "") or "").lower()]
+        elif major_lower:
+            token = major_lower.split()[0]
+            filtered_course_db = [c for c in course_db if token in (c.get("code", "") + " " + (c.get("department", "") or "")).lower()]
+    except Exception:
+        filtered_course_db = course_db
+
     # map skill -> recommended course code
     recommendations = []
     for g in skill_gaps or []:
@@ -22,7 +34,7 @@ def generate_curriculum_plan(client, major, courses_taken, career_goal, skill_ga
         key = _normalize(skill_name)
         # find best matching course
         match = None
-        for c in course_db:
+        for c in filtered_course_db:
             skills = [ _normalize(x) for x in c.get("skills", []) ]
             if any(key in sk or sk in key for sk in skills):
                 if c.get("code") not in taken:
@@ -45,7 +57,7 @@ def generate_curriculum_plan(client, major, courses_taken, career_goal, skill_ga
             idx += 1
             if code in used: continue
             # find course record
-            c = next((x for x in course_db if x.get("code") == code), None)
+            c = next((x for x in filtered_course_db if x.get("code") == code), None)
             if not c: continue
             used.add(code)
             sem_courses.append({"code": c.get("code"), "name": c.get("name"), "fills_skill": ", ".join(c.get("skills", [])[:2]), "career_relevance": ", ".join(c.get("career_relevance", [])[:2]), "recommended": True})
@@ -54,7 +66,12 @@ def generate_curriculum_plan(client, major, courses_taken, career_goal, skill_ga
 
     # If no recommended course matched, suggest general foundational CS courses for CS majors
     if not semesters:
-        fallback = [c for c in course_db if c.get("code") in ["CMPSC 131", "CMPSC 132", "CMPSC 465"]]
+        # Provide sensible fallback based on major; for CS prefer core CS courses, otherwise use first few filtered courses
+        if "computer" in major_lower or major_lower.strip() in ("cs", "c.s.", "computer science"):
+            fallback_codes = ["CMPSC 131", "CMPSC 132", "CMPSC 465"]
+            fallback = [c for c in filtered_course_db if c.get("code") in fallback_codes]
+        else:
+            fallback = filtered_course_db[:3]
         semesters = [{"name": "Next Semester — Recommended", "courses": [{"code": c.get("code"), "name": c.get("name"), "fills_skill": ", ".join(c.get("skills", [])[:2]), "career_relevance": ", ".join(c.get("career_relevance", [])[:2]), "recommended": True} for c in fallback]}]
 
     # Resources: lightweight curated links based on top gaps
